@@ -5,88 +5,102 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Profile</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ramaraja&display=swap" rel="stylesheet">
         <style>
             * {
                 box-sizing: border-box;
+                padding: 0;
+                margin: 0;
             }
 
             body {
                 font-size: small;
-                font-family: Arial, Helvetica, sans-serif;
-                
-                background-color: #FFFFFF;
-                object-fit: cover;
+                font-family: 'Ramaraja', serif;
             }
 
-            .wrapper {
-                background-color: white;
-                border-width: 1px;
-                border-style: solid;
-                box-shadow: 0px 0px 50px #bfbfbf;
+            .container {
+                min-width: 100vw;
+                min-height: 100vh;
 
-                width: 1200px;
-                height: auto;
-                margin: 50px auto;
+                display: grid;
+                grid-template-columns: 50% 50%;
             }
 
-            img {
-                max-width: 100%;
-                max-height: 100%;
+            .item-1 {
+                background-image: url(assets/photo-id.jpg);
+                background-size: cover;
+                background-position: 50% 50%;
             }
 
-            .photo {
-                width: 232px;
-                height: 232px;
+            .item-2 {
+                background-color: #81B622;
+            }
+
+            .about {
+                max-width: 400px;
+
+                margin-top: 25%;
+                margin-left: 10%;
+            }
+
+            .greeting {
+                color: #ECF87F;
+            }
+
+            .description {
+                font-size: 3em;
+            }
+
+            .socials ul li {
+                display: inline;
+            }
+
+            .socials ul li a {
+                text-decoration: none;
+                font-size: 1.5em;
+                color: #ECF87F;
+            }
+
+            #github {
+                padding-right: 10px;
+            }
+
+            #email {
+                padding-left: 10px;
+            }
+
+            .disclaimer {
+                margin-top: 25%;
+                margin-left: 10%;
             }
         </style>
         <script defer></script>
     </head>
     <body>
-        <div class="wrapper">
-            <header>
-                <div class="row">
-                    <div class="col">
-                        <div class="photo">
-                            <img src="assets/photo-id.jpg" alt="Ross Berry, headshot">
-                        </div>
-                    </div>
-                    <div class="col">
-                        <h1>Ross Berry</h1>
-                        <h2>Developer | Student</h2>
-                        
-                        <div class="socials">
-                            <ul class="socials">
-                                <li>Twitter</li>
-                                <li>Facebook</li>
-                                <li>GitHub</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </header>
+        <div class="container">
+            <div class="item-1"></div>
+            <div class="item-2">
+                <div class="about">
+                    <h2 class="greeting">Hi FRIEND,</h2>
 
-            <main>
-                <div class="row">
-                    <nav class="col">
-                        <a href="#">Dedalus</a>
-                        <a href="#">The Coders Guild</a>
-                    </nav>
-                </div>
-            </main>
+                    <p class="description">
+                        I'm Ross Berry - an apprentice Developer living in Greater Manchester, United Kingdom and working for Dedalus.
+                    </p>
 
-            <footer>
-                <div class="row">
-                    <div class="col contact">
-                        <a href="#">Contact via social links</a>
-                    </div>
-                    <div class="col location">
-                        <a href="#">Leeds - UK</a>
-                    </div>
-                    <div class="col copyright">
-                        <a href="#">Copyright &copy; 2022 All rights reserved</a>
+                    <div class="socials">
+                        <ul>
+                            <li><a id="github" href="https://github.com/Ross-Berry" title="GitHub">GitHub</a></li>
+                            <li><a id="email" href="mailto:rossberry@btinternet.com" title="Email">Email</a></li>
+                        </ul>
                     </div>
                 </div>
-            </footer>
+
+                <div class="disclaimer">
+                    Photograph taken by Ross Berry - February 2022
+                </div>
+            </div>
         </div>
     </body>
 </html>
